@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Adicione os seus dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="infoForm">
+    <ion-item>
+      <ion-label position="floating">Informe o nome:</ion-label>
+      <ion-input type="text" formControlName="info_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Informe o telefone: </ion-label>
+      <ion-input type="text" formControlName="info_fone"></ion-input>
+    </ion-item>
+    <ion-button shape="round" color="primary" expand="block" [disabled]="!infoForm.valid" (click)="saveInfo()">Save</ion-button>
+  </form>
+</ion-content>
