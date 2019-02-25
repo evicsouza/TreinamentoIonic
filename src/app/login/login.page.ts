@@ -26,10 +26,10 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
-  saveInfo() {
+  salvar() {
     let newInfo = firebase.database().ref('infos/').push();
     newInfo.set(this.infoForm.value);
-    this.router.navigate(['/detalhes/'+newInfo.key]);
+    this.router.navigate([''+newInfo.key]);
   }
 
 }

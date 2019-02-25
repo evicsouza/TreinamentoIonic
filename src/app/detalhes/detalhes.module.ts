@@ -1,17 +1,13 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-
 import { DetalhesPage } from './detalhes.page';
 
 const routes: Routes = [
-  {
-    path: '/detalhes',
-    component: DetalhesPage
-  }
+  { path: '', component: DetalhesPage }
 ];
 
 @NgModule({
@@ -24,3 +20,4 @@ const routes: Routes = [
   declarations: [DetalhesPage]
 })
 export class DetalhesPageModule {}
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

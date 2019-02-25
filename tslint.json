@@ -4,6 +4,8 @@
   ],
   "rules": {
     "arrow-return-shorthand": true,
+    ".read": true,
+    ".write": true,
     "callable-types": true,
     "class-name": true,
     "comment-format": [
